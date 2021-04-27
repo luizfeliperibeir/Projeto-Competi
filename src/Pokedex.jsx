@@ -104,7 +104,7 @@ const Pokedex = (props) => {
             <TextField
               className={classes.searchInput}
               onChange={handleSearchChange}
-              label="Pesquisar Pokemon"
+              label="Pesquisar Pokémon"
               variant="standard"
             />
           </div>
