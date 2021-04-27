@@ -15,14 +15,17 @@
 
 // export default App;
 
+import './Reset.css';
+
 import { MuiThemeProvider } from '@material-ui/core';
 import { Provider } from 'react-redux';
 import React from 'react';
 import Root from './pages/Root';
+import { store } from './store/store';
 
 const App = () => {
 	return (
-		<Provider>
+		<Provider store={store}>
 			<MuiThemeProvider>
 				<Root />
 			</MuiThemeProvider>

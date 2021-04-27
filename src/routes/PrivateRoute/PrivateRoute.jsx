@@ -8,11 +8,11 @@ const PrivateRoute = ({ component: Component, path, ...rest }) => {
 	const userPassword = useSelector((state) => state.userPassword);
 
 	if (path === '/') {
-		history.push('/dashboard/home');
+		history.push('/dashboard/pokedex');
 	}
-	if (!userPassword) {
+	/* if (!userPassword) {
 		history.push('/login');
-	}
+	} */
 
 	return <Route path={path} component={Component} {...rest} />;
 };

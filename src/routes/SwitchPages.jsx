@@ -1,6 +1,6 @@
 import { Box, Typography } from '@material-ui/core';
 
-import Pokedex from '../Pokedex';
+import Pokedex from '../pages/Pokedex/Pokedex';
 import React from 'react';
 import { useParams } from 'react-router';
 
