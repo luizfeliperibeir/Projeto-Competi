@@ -1,18 +1,13 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
-import * as serviceWorker from "./ServiceWorker";
-import { Router } from "react-router-dom";
-import { createBrowserHistory } from "history";
+import App from './App';
+import IdleTimer from 'react-idle-timer';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-const history = createBrowserHistory();
 ReactDOM.render(
-  <React.StrictMode>
-    <Router history={history}>
-      <App />
-    </Router>
-  </React.StrictMode>,
-  document.getElementById("root")
+	<React.StrictMode>
+		<IdleTimer>
+			<App />
+		</IdleTimer>
+	</React.StrictMode>,
+	document.getElementById('root')
 );
-
-serviceWorker.unregister();
