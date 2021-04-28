@@ -1,20 +1,52 @@
+import { LOAD_POKEMON_DATA, LOAD_POKEMON_LIST } from '../constants/actionsStrigns';
 import { applyMiddleware, compose, createStore } from 'redux';
 
-import { LOAD_FIRST_HUNDRED_POKEMON } from '../constants/actionsStrigns';
 import thunk from 'redux-thunk';
 
 const INITIAL_STATE = {
-	pokemonList: {},
+	pokemonList: {
+		results: [],
+	},
+	pokemonData: {
+		data: [],
+	},
 };
 
-// async redux
+//
 
 const enhancer = compose(applyMiddleware(thunk));
 
 const state = (state = INITIAL_STATE, action) => {
 	switch (action.type) {
-		case LOAD_FIRST_HUNDRED_POKEMON:
+		case LOAD_POKEMON_LIST:
 			return { ...state, pokemonList: action.payload };
+
+		case 'CLEAR_TYPE':
+			return {
+				...state,
+				pokemonList: {},
+				pokemonData: {
+					...state.pokemonData,
+					data: [
+						{
+							name: '',
+							names: [],
+							sprites: {
+								front_default: '',
+							},
+						},
+					],
+				},
+			};
+
+		case LOAD_POKEMON_DATA:
+			return {
+				...state,
+				pokemonData: {
+					...state.pokemonData,
+					data: [...state.pokemonData.data, action.payload],
+				},
+			};
 
 		default:
 			return { ...state };

@@ -1,0 +1,50 @@
+{
+	"data": [
+		{
+			"name": "",
+			"sprite": {
+				"front_default": ""
+			},
+			"types": [
+				{
+					"type": {
+						"name": ""
+					}
+				}
+			]
+		},
+		{
+			"name": "",
+			"sprite": { "front_default": "" },
+			"types": [
+				{
+					"type": {
+						"name": ""
+					}
+				}
+			]
+		},
+		{
+			"name": "",
+			"sprite": { "front_default": "" },
+			"types": [
+				{
+					"type": {
+						"name": ""
+					}
+				}
+			]
+		},
+		{
+			"name": "",
+			"sprite": { "front_default": "" },
+			"types": [
+				{
+					"type": {
+						"name": ""
+					}
+				}
+			]
+		}
+	]
+}
