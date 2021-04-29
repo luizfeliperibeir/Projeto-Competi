@@ -10,6 +10,7 @@ const INITIAL_STATE = {
 	pokemonData: {
 		data: [],
 	},
+	userPassword: '',
 };
 
 //
@@ -48,6 +49,12 @@ const state = (state = INITIAL_STATE, action) => {
 				},
 			};
 
+		case 'SET_USER_PASSWORD':
+			return {
+				...state,
+				userPassword: action.payload,
+			};
+
 		default:
 			return { ...state };
 	}
@@ -56,3 +63,9 @@ const state = (state = INITIAL_STATE, action) => {
 const store = createStore(state, enhancer);
 
 export { store };
+
+/* 
+		
+	{...obj, obj: 'vizeu'}
+
+*/
