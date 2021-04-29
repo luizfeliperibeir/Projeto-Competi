@@ -31,3 +31,10 @@ export const clearPokemonListAction = () => (dispatch) => {
 		payload: {},
 	});
 };
+
+export const setUserPassword = (userPassword) => (dispatch) => {
+	dispatch({
+		type: 'SET_USER_PASSWORD',
+		payload: userPassword,
+	});
+};
