@@ -1,6 +1,6 @@
 import { Route, Switch } from 'react-router';
 
-import Login from '../pages/Login/Login';
+import Login from '../pages/Login/App';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import React from 'react';
 import SwitchPages from './SwitchPages';
